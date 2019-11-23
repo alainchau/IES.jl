@@ -1,0 +1,13 @@
+name = "ies"
+uuid = "eeca2b63-afe0-4582-a634-99b3e3396a55"
+authors = ["Alain <phchau@ucsd.edu>"]
+version = "0.1.0"
+
+[compat]
+julia = "1"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
