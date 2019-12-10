@@ -34,7 +34,6 @@ end
 iesloss(mfd::Manifold, i::Integer, ζ) = iesloss(mfd, [i], ζ)
 
 
-# function _ies_brute(X; k::Integer=10, d::Integer=2, s::Integer=2, m=20, ζ=1)
 function _ies_brute(mfd::Manifold; kwargs...)
     bestinc(mfd, kwargs[:s]-1, [1], kwargs[:ζ])[1]
 end
@@ -42,7 +41,7 @@ end
 function _ies_sg(mfd::Manifold; kwargs...)
     s    = get(kwargs, :s, 2)
     ζ    = get(kwargs, :ζ, 1.0)
-    quick = get(kwargs, :q, false)
+    quick = get(kwargs, :q, true) # need to do this
 
     d, m, n = size(mfd.U)
     S, L = bestinc(mfd, d-1, [1], ζ)
@@ -61,7 +60,7 @@ function _ies_ag(mfd::Manifold; kwargs...)
     # Define sensible defaults
     s    = get(kwargs, :s, 2)
     ζ    = get(kwargs, :ζ, 1.0)
-    quick = get(kwargs, :q, false)
+    quick = get(kwargs, :q, true)
 
     d = dim(mfd)
     m = getm(mfd)
