@@ -1,13 +1,15 @@
-name = "ies"
-uuid = "eeca2b63-afe0-4582-a634-99b3e3396a55"
+name = "IES"
+uuid = "c2e1c838-cf0b-5def-a3a2-f093d8c28d69"
 authors = ["Alain <phchau@ucsd.edu>"]
 version = "0.1.0"
 
-[compat]
-julia = "1"
-
-[extras]
-Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
-
-[targets]
-test = ["Test"]
+[deps]
+Arpack = "7d9fca2a-8960-54d3-9f78-7d1dccf2cb97"
+Combinatorics = "861a8166-3701-5b0c-9a16-15d98fcdc6aa"
+Distances = "b4f34e82-e78d-54a5-968a-f98e89d6e8f7"
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+NearestNeighborDescent = "dd2c4c9e-a32f-5b2f-b342-08c2f244fce8"
+NearestNeighbors = "b8a86587-4115-5ab1-83bc-aa920d37bbce"
+ORCA = "47be7bcc-f1a6-5447-8b36-7eeeff7534fd"
+Rotations = "6038ab10-8711-5258-84ad-4b1120ba62dc"
+SparseArrays = "2f01184e-e22b-5df5-ae63-d93ebab69eaf"
